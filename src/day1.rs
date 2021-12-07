@@ -13,14 +13,9 @@ pub fn count_increases() {
 
       let mut counter = 0;
       for i in 1..measures.len() {
-        let res;
         if measures[i - 1] < measures[i] {
-          res = "increased";
           counter += 1;
-        } else {
-          res = "decreased";
         }
-        println!("{} ({})", measures[i], res);
       }
 
       println!(
@@ -51,10 +46,7 @@ pub fn sliding_window_increases() {
         }
       }
 
-      println!(
-        "Sums that are larger than the previous sum: {}",
-        counter
-      );
+      println!("Sums that are larger than the previous sum: {}", counter);
     }
 
     Err(e) => println!("Failed: {:?}", e),
